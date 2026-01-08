@@ -200,36 +200,51 @@ body::after {
     gap: var(--spacing-xs);
 }
 
-.priority-btn {
+.priority-select {
     padding: var(--spacing-sm) var(--spacing-md);
     background: rgba(18, 25, 40, 0.7);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
-    color: var(--text-secondary);
+    color: var(--text-primary);
     cursor: pointer;
     font-size: 0.875rem;
     transition: all var(--transition-fast);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    white-space: nowrap;
+    outline: none;
+    min-width: 100px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0b3d6'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
 }
 
-.priority-btn:hover {
+.priority-select:hover {
     border-color: var(--primary-color);
-    color: var(--text-primary);
 }
 
-.priority-btn.active {
+.priority-select:focus {
     border-color: var(--primary-color);
-    color: var(--text-primary);
-    background: rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
 }
 
-.priority-btn.priority-high.active {
-    border-color: var(--danger-color);
-    background: rgba(255, 77, 141, 0.1);
+/* 下拉框选项样式 */
+.priority-select option {
+    background: var(--card-color);
+    color: var(--text-primary);
+    padding: var(--spacing-sm);
+}
+
+.priority-select option[value="normal"] {
+    color: var(--primary-color);
+}
+
+.priority-select option[value="high"] {
     color: var(--danger-color);
+}
+
+.priority-select option[value="low"] {
+    color: var(--text-secondary);
 }
 
 #taskInput {
@@ -665,6 +680,10 @@ body::after {
 
     .priority-selector {
         justify-content: center;
+    }
+
+    .priority-select {
+        min-width: 80px;
     }
 
     .btn-add {

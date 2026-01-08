@@ -9,6 +9,7 @@ const totalTasksEl = document.getElementById('totalTasks');
 const completedTasksEl = document.getElementById('completedTasks');
 const inputHint = document.getElementById('inputHint');
 const clearAllBtn = document.getElementById('clearAllBtn');
+const prioritySelect = document.getElementById('prioritySelect');
 let currentPriority = 'normal'; // 当前选中的优先级
 
 // 任务数组（存储所有任务）
@@ -92,18 +93,9 @@ function setupEventListeners() {
     // 使用事件委托处理任务列表中的点击事件
     taskList.addEventListener('click', handleTaskListClick);
 
-    // 优先级按钮点击事件
-    document.querySelectorAll('.priority-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            // 移除所有按钮的active类
-            document.querySelectorAll('.priority-btn').forEach(b => {
-                b.classList.remove('active');
-            });
-            // 添加active类到当前按钮
-            btn.classList.add('active');
-            // 更新当前优先级
-            currentPriority = btn.dataset.priority;
-        });
+    // 优先级下拉框变化事件
+    prioritySelect.addEventListener('change', () => {
+        currentPriority = prioritySelect.value;
     });
 
     // 全部删除按钮点击事件

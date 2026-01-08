@@ -22,12 +22,17 @@
                 <div class="input-group">
                     <input type="text" id="taskInput" placeholder="添加新任务..." autocomplete="off">
                     <div class="priority-selector">
-                        <button type="button" class="priority-btn priority-normal active" data-priority="normal">
-                            <i class="fas fa-circle"></i> 普通
-                        </button>
-                        <button type="button" class="priority-btn priority-high" data-priority="high">
-                            <i class="fas fa-exclamation-circle"></i> 重要
-                        </button>
+                        <select id="prioritySelect" class="priority-select">
+                            <option value="normal" selected>
+                                <i class="fas fa-circle"></i> 普通
+                            </option>
+                            <option value="high">
+                                <i class="fas fa-exclamation-circle"></i> 重要
+                            </option>
+                            <option value="low">
+                                <i class="fas fa-arrow-down"></i> 低
+                            </option>
+                        </select>
                     </div>
                     <button id="addBtn" class="btn-add">
                         <i class="fas fa-plus"></i> 添加

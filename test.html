@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办清单测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .test-title {
+            color: #333;
+            border-bottom: 2px solid #4a6fa5;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+            border-left: 4px solid #4a6fa5;
+        }
+        .success {
+            color: #28a745;
+        }
+        .error {
+            color: #dc3545;
+        }
+        .warning {
+            color: #ffc107;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #4a6fa5;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #2a4a7a;
+        }
+    </style>
+</head>
+<body>
+    <h1>待办清单应用测试</h1>
+
+    <div class="test-section">
+        <h2 class="test-title">文件检查</h2>
+
+        <div class="test-item">
+            <h3>index.html <span class="success">✓ 存在</span></h3>
+            <p>主HTML文件，包含页面结构和布局。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>style.css <span class="success">✓ 存在</span></h3>
+            <p>样式文件，实现现代化简约风格。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>script.js <span class="success">✓ 存在</span></h3>
+            <p>JavaScript逻辑文件，实现所有交互功能。</p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">功能测试清单</h2>
+
+        <div class="test-item">
+            <h3>1. 添加任务功能</h3>
+            <p><strong>测试方法：</strong>在输入框中输入任务内容，点击"添加"按钮或按回车键。</p>
+            <p><strong>预期结果：</strong>新任务显示在任务列表中。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>2. 标记任务完成</h3>
+            <p><strong>测试方法：</strong>点击任务前的复选框。</p>
+            <p><strong>预期结果：</strong>任务文本显示划线效果，颜色变灰。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>3. 删除任务</h3>
+            <p><strong>测试方法：</strong>点击任务右侧的删除按钮（垃圾桶图标）。</p>
+            <p><strong>预期结果：</strong>任务从列表中移除。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>4. 任务统计</h3>
+            <p><strong>测试方法：</strong>添加、完成、删除任务时观察统计数字变化。</p>
+            <p><strong>预期结果：</strong>总任务数和已完成数正确更新。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>5. 空状态提示</h3>
+            <p><strong>测试方法：</strong>删除所有任务。</p>
+            <p><strong>预期结果：</strong>显示"暂无待办事项"提示。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>6. 输入验证</h3>
+            <p><strong>测试方法：</strong>尝试添加空任务或超过100字符的任务。</p>
+            <p><strong>预期结果：</strong>显示错误提示，任务不被添加。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>7. 响应式设计</h3>
+            <p><strong>测试方法：</strong>调整浏览器窗口大小或在移动设备上查看。</p>
+            <p><strong>预期结果：</strong>布局自适应不同屏幕尺寸。</p>
+        </div>
+
+        <div class="test-item">
+            <h3>8. 键盘快捷键</h3>
+            <p><strong>测试方法：</strong></p>
+            <ul>
+                <li>在输入框中按 <code>Enter</code> 键添加任务</li>
+                <li>在输入框中按 <code>Ctrl+Enter</code> 添加任务</li>
+                <li>在输入框中按 <code>Esc</code> 键清空输入</li>
+                <li>按 <code>Ctrl+D</code> 删除所有已完成任务</li>
+            </ul>
+        </div>
+
+        <div class="test-item">
+            <h3>9. 任务编辑</h3>
+            <p><strong>测试方法：</strong>双击任务文本。</p>
+            <p><strong>预期结果：</strong>进入编辑模式，可以修改任务内容。</p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">访问应用</h2>
+        <p>点击以下链接访问待办清单应用：</p>
+        <a href="http://localhost:8080/index.html" class="btn" target="_blank">打开待办清单应用</a>
+        <a href="http://localhost:8080/" class="btn" target="_blank">查看目录列表</a>
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">开发工具</h2>
+        <p>在浏览器中按 <code>F12</code> 打开开发者工具，可以：</p>
+        <ul>
+            <li>查看控制台输出</li>
+            <li>调试JavaScript代码</li>
+            <li>检查CSS样式</li>
+            <li>测试响应式设计</li>
+        </ul>
+        <p>应用还提供了调试接口，在控制台中输入：</p>
+        <pre><code>// 获取所有任务
+todoApp.getTasks()
+
+// 添加任务
+todoApp.addTask("测试任务")
+
+// 删除所有已完成任务
+todoApp.deleteCompletedTasks()
+
+// 清空所有任务
+todoApp.clearAllTasks()</code></pre>
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">技术特性</h2>
+        <ul>
+            <li><strong>现代化设计：</strong>使用CSS变量、Flexbox布局、平滑过渡动画</li>
+            <li><strong>响应式布局：</strong>适配手机、平板、桌面设备</li>
+            <li><strong>无障碍访问：</strong>使用语义化HTML和ARIA属性</li>
+            <li><strong>性能优化：</strong>使用事件委托、CSS动画、防抖处理</li>
+            <li><strong>安全性：</strong>输入验证、HTML转义防止XSS攻击</li>
+            <li><strong>用户体验：</strong>即时反馈、错误提示、键盘快捷键</li>
+        </ul>
+    </div>
+</body>
+</html>
